@@ -7,12 +7,17 @@ public class MovieController {
 
     private MovieRepositoryImpl movieRepository;
 
-    // Constructor que recibe el repositorio (Inyección de dependencia)
+    // 1. Asegúrate de que el constructor sea PUBLIC
     public MovieController(MovieRepositoryImpl movieRepository) {
         this.movieRepository = movieRepository;
     }
 
+    // 2. Asegúrate de que el método sea PUBLIC y se llame EXACTAMENTE así
     public void createMovieController(Movie movie) {
-        movieRepository.createMovie(movie);
+        if (movieRepository != null) {
+            movieRepository.createMovie(movie);
+        } else {
+            System.out.println("Error: El repositorio no está inicializado.");
+        }
     }
 }

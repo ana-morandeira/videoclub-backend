@@ -12,7 +12,7 @@ public class MovieRepositoryImpl {
 
     public void createMovie(Movie movie) {
 
-        // Preparamos la consulta con todos los campos nuevos
+        // Adaptamos la query con todos los campos de tu db.json
         String querySQLCreate = "INSERT INTO movies (titulo, director, genero, argumento, imagen, imageCartel, trailer) " +
                 "VALUES ('" + movie.getTitulo() + "', '" +
                 movie.getDirector() + "', '" +
@@ -23,16 +23,16 @@ public class MovieRepositoryImpl {
                 movie.getTrailer() + "')";
 
         try {
-            connection = DBManager.initConnection(); // Conectar a la BBDD
-            Statement statement = connection.createStatement(); // Preparar la sentencia
-            statement.executeUpdate(querySQLCreate); // Ejecutar la sentencia
+            connection = DBManager.initConnection(); // conectar a la bbdd
+            Statement statement = connection.createStatement(); // preparar la sentencia
+            statement.executeUpdate(querySQLCreate); // ejecutar la sentencia
             System.out.println("Película Creada con éxito");
 
         } catch (Exception exception) {
             System.out.println("Error al crear la película: " + exception.getMessage());
 
         } finally {
-            DBManager.closeConnection(); // Cerrar conexión siempre
+            DBManager.closeConnection();
         }
     }
 }

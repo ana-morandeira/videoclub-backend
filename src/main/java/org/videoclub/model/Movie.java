@@ -10,11 +10,7 @@ public class Movie {
     private String imageCartel;
     private String trailer;
 
-    public Movie() {
-    }
-
-    public Movie(int id, String titulo, String director, String genero, String argumento, String imagen, String imageCartel, String trailer) {
-        this.id = id;
+    public Movie(String titulo, String director, String genero, String argumento, String imagen, String imageCartel, String trailer) {
         this.titulo = titulo;
         this.director = director;
         this.genero = genero;
@@ -25,7 +21,6 @@ public class Movie {
     }
 
     public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
 
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }

@@ -1,30 +1,60 @@
 package org.videoclub.view;
 
+import org.videoclub.controller.MovieController;
 import org.videoclub.model.Movie;
+
 import java.util.List;
+import java.util.Scanner;
 
 public class MovieView {
 
-    public void displayMovieDetails(Movie movie) {
-        System.out.println("------- DETALLES DE LA PELÍCULA -------");
-        System.out.println("ID: " + movie.getId());
-        System.out.println("Título: " + movie.getTitulo());
-        System.out.println("Director: " + movie.getDirector());
-        System.out.println("Género: " + movie.getGenero());
-        System.out.println("Argumento: " + movie.getArgumento());
-        System.out.println("Tráiler: " + movie.getTrailer());
-        System.out.println("---------------------------------------");
+    private MovieController movieController;
+
+    public MovieView(MovieController movieController) {
+        this.movieController = movieController;
     }
 
-    public void displayMessage(String message) {
-        System.out.println("MENSAJE DEL SISTEMA: " + message);
+    public void createMovieView() {
+        Movie movie = generateMovie();
+        movieController.createMovieController(movie);
     }
 
-    public void displayAllMovies(List<Movie> movies) {
-        System.out.println("========== LISTADO DE CATÁLOGO ==========");
-        for (Movie movie : movies) {
-            System.out.println(movie.getTitulo() + " (" + movie.getDirector() + ")");
+    public Movie generateMovie() {
+        Scanner scanner = new Scanner(System.in).useLocale(java.util.Locale.US);
+
+        System.out.println("Escriba el título de la película: ");
+        String titulo = scanner.nextLine();
+
+        System.out.println("Escriba el director de la película: ");
+        String director = scanner.nextLine();
+
+        System.out.println("Escriba el género de la película: ");
+        String genero = scanner.nextLine();
+
+        System.out.println("Escriba el argumento de la película: ");
+        String argumento = scanner.nextLine();
+
+        System.out.println("Escriba la imagen de la película: ");
+        String imagen = scanner.nextLine();
+
+        System.out.println("Escriba la imagen del cartel de la película: ");
+        String imageCartel = scanner.nextLine();
+
+        System.out.println("Escriba el trailer de la película: ");
+        String trailer = scanner.nextLine();
+
+        Movie movie = new Movie(titulo, director, genero, argumento, imagen, imageCartel, trailer);
+
+        scanner.close();
+
+        return movie;
+    }
+
+    public void showMovies() {
+        List<Movie> movieList = movieController.findAllController();
+
+        for (Movie movie : movieList) {
+            System.out.println("Título: " + movie.getTitulo() + " | Director: " + movie.getDirector() + " | Género: " + movie.getGenero());
         }
-        System.out.println("=========================================");
     }
 }

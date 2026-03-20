@@ -24,7 +24,6 @@ public class Movie {
         this.trailer = trailer;
     }
 
-    // Getters y Setters (necesarios para acceder a los datos)
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

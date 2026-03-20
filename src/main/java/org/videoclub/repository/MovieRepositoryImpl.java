@@ -12,7 +12,8 @@ public class MovieRepositoryImpl {
 
     public void createMovie(Movie movie) {
 
-        // Adaptamos la query con todos los campos de tu db.json
+
+
         String querySQLCreate = "INSERT INTO movies (titulo, director, genero, argumento, imagen, imageCartel, trailer) " +
                 "VALUES ('" + movie.getTitulo() + "', '" +
                 movie.getDirector() + "', '" +

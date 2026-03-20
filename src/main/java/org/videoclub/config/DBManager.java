@@ -1,4 +1,4 @@
-package org.videoclub.config; // 1. Paquete actualizado
+package org.videoclub.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,6 @@ import java.sql.SQLException;
 
 public class DBManager {
 
-    // 2. URL actualizada con el nombre de tu base de datos actual
     private static final String URL = "jdbc:mysql://localhost:3306/movies_app";
     private static final String USER = "root";
     private static final String PASSWORD = "root";

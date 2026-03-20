@@ -1,26 +1,24 @@
-package org.videoclub; // 1. Ahora el paquete es la raíz
+package org.videoclub;
 
-// 2. Importaciones necesarias desde sus respectivas carpetas
 import org.videoclub.controller.MovieController;
 import org.videoclub.model.Movie;
 import org.videoclub.repository.MovieRepositoryImpl;
 
 public class Main {
     public static void main(String[] args) {
-        // 3. Inicializamos las piezas del patrón MVC
         MovieRepositoryImpl movieRepository = new MovieRepositoryImpl();
         MovieController movieController = new MovieController(movieRepository);
 
         System.out.println("--- INICIANDO IMPORTACIÓN DE CATÁLOGO ---");
 
-        // --- ARGENTINA ---
+
         movieController.createMovieController(new Movie(0, "El secreto de sus ojos", "Juan José Campanella", "Thriller", "Un oficial busca resolver un crimen del pasado.", "src/assets/images/argentina/elSecretoDeSusOjos.jpg", "src/assets/images/argentina/elSecretoDeSusOjosCartel.jpg", "https://youtu.be/hKa8U-8vsfU"));
         movieController.createMovieController(new Movie(0, "Nueve reinas", "Fabián Bielinsky", "Crimen, Suspenso", "Dos estafadores planean un gran golpe.", "src/assets/images/argentina/nueveReinas.jpg", "src/assets/images/argentina/nueveReinasCartel.jpg", "https://youtu.be/Awu9WonTVB0"));
         movieController.createMovieController(new Movie(0, "El hijo de la novia", "Juan José Campanella", "Drama", "Un hombre en crisis redescubre su vida.", "src/assets/images/argentina/elHijoDeLaNovia.jpg", "src/assets/images/argentina/elHijoDeLaNoviaCartel.jpg", "https://youtu.be/AoAU_eeSq4o"));
         movieController.createMovieController(new Movie(0, "La odisea de los giles", "Sebastián Borensztein", "Aventura", "Vecinos buscan recuperar su dinero.", "src/assets/images/argentina/laOdiseaDeLosGiles.jpg", "src/assets/images/argentina/laOdiseaDeLosGilesCartel.jpg", "https://youtu.be/ZP_o6GQaFW8"));
         movieController.createMovieController(new Movie(0, "Truman", "Cesc Gay", "Drama", "Dos amigos comparten momentos inolvidables.", "src/assets/images/argentina/truman.jpg", "src/assets/images/argentina/trumanCartel.jpg", "https://youtu.be/czaA6yRbass"));
 
-        // --- MÉXICO ---
+
         movieController.createMovieController(new Movie(0, "Biutiful", "Alejandro G. Iñárritu", "Drama", "Un hombre lucha por el futuro de sus hijos.", "src/assets/images/mexico/biutiful.jpg", "src/assets/images/mexico/biutifulCartel.jpg", "https://youtu.be/3WzJcwGA6YM"));
         movieController.createMovieController(new Movie(0, "El espinazo del diablo", "Guillermo del Toro", "Terror", "Fantasmas y secretos en un orfanato.", "src/assets/images/mexico/elEspinazoDelDiablo.jpg", "src/assets/images/mexico/elEspinazoDelDiabloCartel.jpg", "https://youtu.be/c3gRqYu5olY"));
         movieController.createMovieController(new Movie(0, "Amores perros", "Alejandro G. Iñárritu", "Drama", "Tres vidas se cruzan trágicamente.", "src/assets/images/mexico/amoresPerros.jpg", "src/assets/images/mexico/amoresPerrosCartel.jpg", "https://youtu.be/ebvWj98Yui0"));
@@ -28,7 +26,7 @@ public class Main {
         movieController.createMovieController(new Movie(0, "La zona", "Rodrigo Plá", "Thriller", "Tensión social en una urbanización privada.", "src/assets/images/mexico/laZona.jpg", "src/assets/images/mexico/laZonaCartel.jpg", "https://youtu.be/kmyMNBdQKiY"));
         movieController.createMovieController(new Movie(0, "Bardo", "Alejandro G. Iñárritu", "Comedia dramática", "Un periodista vive una crisis surrealista.", "src/assets/images/mexico/bardo.jpg", "src/assets/images/mexico/bardoCartel.jpg", "https://youtu.be/mcN_edLQHY4"));
 
-        // --- FRANCIA ---
+
         movieController.createMovieController(new Movie(0, "Volver", "Pedro Almodóvar", "Comedia dramática", "Mujeres enfrentan secretos familiares.", "src/assets/images/francia/volver.jpg", "src/assets/images/francia/volverCartel.jpg", "https://youtu.be/hp4u67AV8VI"));
         movieController.createMovieController(new Movie(0, "Lo imposible", "J.A. Bayona", "Drama", "Una familia lucha por sobrevivir al tsunami.", "src/assets/images/francia/loImposible.jpg", "src/assets/images/francia/loImposibleCartel.jpg", "https://youtu.be/qAcNyfqIQkw"));
         movieController.createMovieController(new Movie(0, "As Bestas", "Rodrigo Sorogoyen", "Thriller", "Hostilidad en un pueblo rural.", "src/assets/images/francia/asBestas.jpg", "src/assets/images/francia/asBestasCartel.jpg", "https://youtu.be/8FfTwEbN9YA"));
@@ -37,7 +35,7 @@ public class Main {
         movieController.createMovieController(new Movie(0, "Un día perfecto", "Fernando León de Aranoa", "Drama bélico", "Trabajadores humanitarios en guerra.", "src/assets/images/francia/unDiaPerfecto.jpg", "src/assets/images/francia/unDiaPerfectoCartel.jpg", "https://youtu.be/ZCjRHoYFAN8"));
         movieController.createMovieController(new Movie(0, "París, Texas", "Wim Wenders", "Drama", "Un hombre busca reconectar con su familia.", "src/assets/images/francia/parisTexas.jpg", "src/assets/images/francia/parisTexasCartel.jpg", "https://youtu.be/HaoKIfDfDxc"));
 
-        // --- ITALIA ---
+
         movieController.createMovieController(new Movie(0, "Dolor y gloria", "Pedro Almodóvar", "Drama", "Un director reflexiona sobre su vida.", "src/assets/images/italia/dolorYGloria.jpg", "src/assets/images/italia/dolorYGloriaCartel.jpg", "https://youtu.be/3c1w2_6mMro"));
         movieController.createMovieController(new Movie(0, "El día de la bestia", "Álex de la Iglesia", "Comedia negra", "Un sacerdote intenta evitar el apocalipsis.", "src/assets/images/italia/elDiaDeLaBestia.jpg", "src/assets/images/italia/elDiaDeLaBestiaCartel.jpg", "https://youtu.be/3egY2bX0k1o"));
         movieController.createMovieController(new Movie(0, "El método", "Marcelo Piñeyro", "Thriller", "Candidatos compiten por un puesto.", "src/assets/images/italia/elMetodo.jpg", "src/assets/images/italia/elMetodoCartel.jpg", "https://youtu.be/1gKX1j3YV1o"));
@@ -46,7 +44,7 @@ public class Main {
         movieController.createMovieController(new Movie(0, "Los otros", "Alejandro Amenábar", "Terror", "Una casa embrujada en la 2ª Guerra Mundial.", "src/assets/images/italia/losOtros.jpg", "src/assets/images/italia/losOtrosCartel.jpg", "https://youtu.be/5gKX4j6YV4o"));
         movieController.createMovieController(new Movie(0, "Vicky Cristina Barcelona", "Woody Allen", "Comedia romántica", "Amigas se enamoran de un pintor.", "src/assets/images/italia/vickyCristinaBarcelona.jpg", "src/assets/images/italia/vickyCristinaBarcelonaCartel.jpg", "https://youtu.be/6gKX5j7YV5o"));
 
-        // --- CHILE ---
+
         movieController.createMovieController(new Movie(0, "El club", "Pablo Larraín", "Drama", "Sacerdotes enfrentan secretos oscuros.", "src/assets/images/chile/elClub.jpg", "src/assets/images/chile/elClubCartel.jpg", "https://youtu.be/7gKX0j2YV0o"));
         movieController.createMovieController(new Movie(0, "Gloria", "Sebastián Lelio", "Drama", "Una mujer busca la felicidad en Santiago.", "src/assets/images/chile/gloria.jpg", "src/assets/images/chile/gloriaCartel.jpg", "https://youtu.be/8gKX1j3YV1o"));
         movieController.createMovieController(new Movie(0, "La contadora de películas", "Sebastián Lelio", "Drama", "Consuelo en el cine durante la dictadura.", "src/assets/images/chile/laContadoraDePeliculas.jpg", "src/assets/images/chile/laContadoraDePeliculasCartel.jpg", "https://youtu.be/9gKX2j4YV2o"));
@@ -55,7 +53,7 @@ public class Main {
         movieController.createMovieController(new Movie(0, "No", "Pablo Larraín", "Drama histórico", "Campaña para derrotar a Pinochet.", "src/assets/images/chile/no.jpg", "src/assets/images/chile/noCartel.jpg", "https://youtu.be/2gKX5j7YV5o"));
         movieController.createMovieController(new Movie(0, "Una mujer fantástica", "Sebastián Lelio", "Drama", "Una mujer trans enfrenta a la sociedad.", "src/assets/images/chile/unaMujerFantastica.jpg", "src/assets/images/chile/unaMujerFantásticaCartel.jpg", "https://youtu.be/3gKX6j8YV6o"));
 
-        // --- UK ---
+
         movieController.createMovieController(new Movie(0, "Agora", "Alejandro Amenábar", "Drama histórico", "La vida de Hipatia en Alejandría.", "src/assets/images/uk/agora.jpg", "src/assets/images/uk/agoraCartel.jpg", "https://youtu.be/4gKX7j9YV7o"));
         movieController.createMovieController(new Movie(0, "El maquinista", "Brad Anderson", "Thriller psicológico", "Un hombre sufre insomnio severo.", "src/assets/images/uk/elMaquinista.jpg", "src/assets/images/uk/elMaquinistaCartel.jpg", "https://youtu.be/5gKX8j0YV8o"));
         movieController.createMovieController(new Movie(0, "Exodus: Dioses y reyes", "Ridley Scott", "Épico bíblico", "Moisés lidera a los israelitas.", "src/assets/images/uk/exodusDiosesYReyes.jpg", "src/assets/images/uk/exodusDiosesYReyesCartel.jpg", "https://youtu.be/6gKX9j1YV9o"));

@@ -5,7 +5,6 @@ import java.util.List;
 
 public class MovieView {
 
-    // Método para mostrar los detalles de una sola película
     public void displayMovieDetails(Movie movie) {
         System.out.println("------- DETALLES DE LA PELÍCULA -------");
         System.out.println("ID: " + movie.getId());
@@ -17,12 +16,10 @@ public class MovieView {
         System.out.println("---------------------------------------");
     }
 
-    // Método para mostrar un mensaje de éxito o error
     public void displayMessage(String message) {
         System.out.println("MENSAJE DEL SISTEMA: " + message);
     }
 
-    // Si más adelante haces un listado de todas las pelis:
     public void displayAllMovies(List<Movie> movies) {
         System.out.println("========== LISTADO DE CATÁLOGO ==========");
         for (Movie movie : movies) {

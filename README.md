@@ -103,16 +103,18 @@ mvn exec:java -Dexec.mainClass="org.videoclub.Main"
 
 Consulta `SELECT * FROM movies` con **180 registros** insertados correctamente desde Java vía JDBC.
 
-![Tabla movies](src/assets/screenshots/bbdd_movies.png)
+<img width="500" height="380" alt="MySQL Workbench" src="https://github.com/user-attachments/assets/107f7bf6-3d9d-4efb-b351-24548899b69f" />
+
 
 ### Compilación exitosa en IntelliJ
 
 > Añade aquí una captura del build sin errores.
 
-![Compilación](src/assets/screenshots/compilacion.png)
+<img width="580" height="400" alt="image" src="https://github.com/user-attachments/assets/e9adf0ba-ad54-45c0-8a96-40ee12e4d768" />
+
 
 ---
 
 ## 👨‍💻 Autor
 
-Desarrollado como proyecto de clase siguiendo el patrón MVC con Java y JDBC.
+Desarrollado como proyecto de clase siguiendo el patrón MVC con Java y JDBC por Ana Morandeira

@@ -11,7 +11,7 @@ public class Main {
         MovieController movieController = new MovieController(movieRepository);
         MovieView movieView = new MovieView(movieController);
 
-        // movieView.createMovieView();
+        movieView.createMovieView();
         movieView.showMovies();
     }
 }

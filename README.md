@@ -110,7 +110,8 @@ Consulta `SELECT * FROM movies` con **180 registros** insertados correctamente d
 
 > Añade aquí una captura del build sin errores.
 
-<img width="580" height="400" alt="image" src="https://github.com/user-attachments/assets/e9adf0ba-ad54-45c0-8a96-40ee12e4d768" />
+<img width="1000" height="803" alt="movies-backendCR" src="https://github.com/user-attachments/assets/6fbff0c9-30b7-446f-820e-d95ce35a6461" />
+
 
 
 ---
